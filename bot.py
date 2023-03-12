@@ -122,6 +122,8 @@ while to_try:
         to_launch_instance.launch_instance(instance_detail)
         to_try = False
         message = 'Success! Edit vnic to get public ip address'
+        link = "https://api.callmebot.com/whatsapp.php?phone=+573005065454&text="+message+"&apikey=502105"
+        f = requests.get(link)
         logging.info(message)
         sys.exit()
     except oci.exceptions.ServiceError as e:
