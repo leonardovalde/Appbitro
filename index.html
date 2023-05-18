@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cambio de color de fondo</title>
+  <style>
+    body {
+      background-color: yellow;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    body.red {
+      background-color: red;
+    }
+  </style>
+</head>
+<body onclick="changeColor()">
+
+<script>
+  function changeColor() {
+    var body = document.querySelector('body');
+    if (body.classList.contains('red')) {
+      body.classList.remove('red');
+    } else {
+      body.classList.add('red');
+    }
+  }
+</script>
+
+</body>
+</html>
